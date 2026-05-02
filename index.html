@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>待办事项</h1>
+        <button id="themeToggle" class="theme-toggle">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="搜索任务..." class="search-input">
+            <button id="clearSearchBtn" class="clear-search-btn">✕</button>
+        </div>
+        <div class="filter-row">
+            <select class="group-selector">
+                <option value="all">所有分组</option>
+            </select>
+            <select class="tag-selector">
+                <option value="all">所有标签</option>
+            </select>
+        </div>
+    </div>
+
+    <button id="addTaskBtn">添加任务</button>
+    <ul id="taskList"></ul>
+
+    <div id="addTaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">新增任务</h2>
+            <input type="text" id="modalTaskInput" placeholder="输入新任务...">
+            <select id="modalGroupSelector" class="group-selector">
+                <option value="all">所有分组</option>
+            </select>
+            <select id="modalTagSelector" class="tag-selector">
+                <option value="all">所有标签</option>
+            </select>
+            <button id="modalAddTaskBtn">确认添加</button>
+            <input type="hidden" id="modalTaskId" value="">
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal confirm-modal">
+        <div class="modal-content confirm-content">
+            <p id="confirmMessage" class="confirm-message"></p>
+            <div class="confirm-actions">
+                <button id="confirmCancelBtn" class="confirm-cancel-btn">取消</button>
+                <button id="confirmOkBtn" class="confirm-ok-btn">确定</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

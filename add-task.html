@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增任务</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>新增任务</h1>
+    </div>
+    <a href="index.html">← 返回任务列表</a>
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="输入新任务...">
+        <select class="group-selector">
+            <option value="all">所有分组</option>
+        </select>
+        <select class="tag-selector">
+            <option value="all">所有标签</option>
+        </select>
+        <button id="addTaskBtn">添加任务</button>
+    </div>
+    <ul id="taskList"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
