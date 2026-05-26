@@ -1185,3 +1185,14 @@ body.dark-mode .confirm-ok-btn:hover {
     background-color: #e53935;
     box-shadow: 0 4px 12px rgba(229, 57, 53, 0.3);
 }
+
+mark {
+    background-color: rgba(255, 193, 7, 0.35);
+    color: inherit;
+    padding: 1px 2px;
+    border-radius: 3px;
+}
+
+body.dark-mode mark {
+    background-color: rgba(255, 193, 7, 0.25);
+}
